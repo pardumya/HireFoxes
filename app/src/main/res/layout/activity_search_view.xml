@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_view_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F2F2"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/search_view_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textSize="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/what"
+                android:layout_marginStart="25sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+            <AutoCompleteTextView
+                android:id="@+id/search_HireServices"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_view_background"
+                android:paddingStart="20dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:hint="@string/hire_services"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlSymmetry"
+                android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where"
+                android:layout_marginStart="25sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_view_background"
+                android:paddingStart="20dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:hint="@string/city_state_pinCode"
+                tools:ignore="RtlSymmetry"
+                android:inputType="text" />
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="@string/find_services"
+            android:background="@drawable/unselected_button_background"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recent_searches"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20sp"
+            android:layout_marginStart="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>

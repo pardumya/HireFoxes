@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "57440049845",
+    "project_id": "hire-foxes",
+    "storage_bucket": "hire-foxes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57440049845:android:2a687041708f8e21d6bcfc",
+        "android_client_info": {
+          "package_name": "com.hire.foxes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57440049845-fsq7tm62m5mmj72os9kf65m8082o9vb3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hire.foxes",
+            "certificate_hash": "7833a3d7bd67dbc15a81fd1d4043ff82e6c75fa7"
+          }
+        },
+        {
+          "client_id": "57440049845-oes5cvhgr4ek0a3n47ru17tfp51rlj44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1aPtj9EqsW_Cl9BDK3Qlhi0NPOomt4rU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57440049845-oes5cvhgr4ek0a3n47ru17tfp51rlj44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
