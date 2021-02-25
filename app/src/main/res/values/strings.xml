@@ -81,6 +81,7 @@
     <string name="auto_pick">Auto Pick</string>
     <string name="description">Description</string>
     <string name="your_description">Tell us a little something about yourself(in less than 150 characters)</string>
+    <string name="save_information">Save Information</string>
 
 
     <string name="all">All</string>

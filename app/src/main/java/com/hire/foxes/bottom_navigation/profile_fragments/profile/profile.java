@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,7 +21,7 @@ import com.hire.foxes.R;
 
 public class profile extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView provider_back_button;
+    ImageView provider_back_button,profile_pic;
     TextView profile_username,profile_email,profile_phone_number;
     FirebaseAuth auth;
     DatabaseReference databaseReference;
@@ -33,13 +34,14 @@ public class profile extends AppCompatActivity implements View.OnClickListener {
 
         //Firebase
         auth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("user_info");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("user_info").child(auth.getCurrentUser().getUid());
         //TextView
         profile_username = findViewById(R.id.profile_username);
         profile_email = findViewById(R.id.profile_email);
         profile_phone_number = findViewById(R.id.profile_phone_number);
         //ImageView
         provider_back_button = findViewById(R.id.provider_back_button);
+        profile_pic = findViewById(R.id.profile_pic);
 
         //OnClick
         provider_back_button.setOnClickListener(this);
@@ -54,9 +56,10 @@ public class profile extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    username = snapshot.child(auth.getCurrentUser().getUid()).child("username").getValue().toString();
-                    email = snapshot.child(auth.getCurrentUser().getUid()).child("email").getValue().toString();
-                    phone_number = snapshot.child(auth.getCurrentUser().getUid()).child("phone_number").getValue().toString();
+                    username = snapshot.child("username").getValue().toString();
+                    email = snapshot.child("email").getValue().toString();
+                    phone_number = snapshot.child("phone_number").getValue().toString();
+                    Glide.with(profile.this).load(snapshot.child("information").child("profile_pic").getValue().toString()).into(profile_pic);
                     profile_username.setText(username);
                     profile_email.setText(email);
                     profile_phone_number.setText(phone_number);
